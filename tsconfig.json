@@ -1,0 +1,19 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"display": "ES2022 ESM",
+	"compilerOptions": {
+		"outDir": "dist",
+		"rootDir": "src",
+		"esModuleInterop": true,
+		"module": "ES2022",
+		"target": "ES2022",
+		"moduleResolution": "node",
+		"newLine": "lf",
+		"declaration": true,
+		"incremental": true
+	},
+	"include": ["src"],
+	"ts-node": {
+		"esm": true
+	}
+}
