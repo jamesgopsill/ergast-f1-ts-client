@@ -3,7 +3,6 @@ import { DriverResponse, DriversResponse } from "./interfaces.js"
 
 export class Drivers extends Base {
 	public drivers(year?: number, round?: number, limit?: number) {
-
 		let url = `${this.baseURL}/drivers.json`
 
 		if (year && round) {
@@ -11,14 +10,14 @@ export class Drivers extends Base {
 		} else if (year) {
 			url = `${this.baseURL}/${year}/drivers.json`
 		}
-		
+
 		let params = {}
 		if (limit) {
 			params = {
 				limit: limit,
 			}
 		}
-		
+
 		return this.get<DriversResponse>(url, params)
 	}
 

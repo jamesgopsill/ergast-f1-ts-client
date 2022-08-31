@@ -34,11 +34,10 @@ export class Base {
 		})
 	}
 
-
 	protected recursiveProcessObject(obj: any) {
 		Object.keys(obj).forEach((key) => {
 			// date YYYY-MM-DD
-			if ( /\d{4}-\d{2}-\d{2}/.test(obj[key]) ) {
+			if (/\d{4}-\d{2}-\d{2}/.test(obj[key])) {
 				obj[key] = new Date(obj[key])
 				return
 			}
@@ -59,11 +58,12 @@ export class Base {
 				}
 			}
 			// if it is an object then process it
-			if (typeof obj[key] == "object" && Array.isArray(obj[key]) == false) {
+			if (
+				typeof obj[key] == "object" &&
+				Array.isArray(obj[key]) == false
+			) {
 				this.recursiveProcessObject(obj[key])
 			}
 		})
 	}
-
-
 }

@@ -8,19 +8,19 @@ if (ok) {
 	console.log(data?.ConstructorTable.Constructors)
 }
 
-({ ok, data } = await client.teams(2020))
+;({ ok, data } = await client.teams(2020))
 if (ok) {
 	console.log(data)
 	console.log(data?.ConstructorTable.Constructors)
 }
 
-({ ok, data } = await client.teams(2020, 4))
+;({ ok, data } = await client.teams(2020, 4))
 if (ok) {
 	console.log(data)
 	console.log(data?.ConstructorTable.Constructors)
 }
 
-({ ok, data } = await client.team("adams"))
+;({ ok, data } = await client.team("adams"))
 if (ok) {
 	console.log(data)
 	console.log(data?.ConstructorTable)
